@@ -1,0 +1,28 @@
+import sys,os
+pid_list = []
+def kill_id(process):
+	cmd = "ps aux | grep -v grep | grep %s " % process
+	f = os.popen(cmd)
+	txt = f.readlines()
+#	print "txt =" ,txt
+	for line in txt[0:2]:
+		colum = line.split()
+		pid = colum[1]
+	#	print pid
+		plist = pid_list.append(pid[0:])
+	print pid_list
+		return pid_list
+	
+
+#process = sys.argv[1]
+#kill_id(process)
+
+
+if __name__ == '__main__':
+	for i in pid_list:
+#		print i
+		cmd = "kill %d " % int(i)
+		os.system(cmd)
+
+process = sys.argv[1]
+kill_id(process)
