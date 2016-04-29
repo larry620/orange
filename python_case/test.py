@@ -204,6 +204,47 @@
 #    print html
 ##    return HttpResponse(html)
 #hour_ahead(5)
-i = range(10)
-for a in i:
-	print 'b' ,a  
+
+list1 = []
+list = [['a', 'b', 'c'],['1', '2', '3']]
+#list1 = [[list[0][1]],[list[1][1]]]
+for i in list:
+#	print i
+#	plist = list1.append(i[1].split())
+	plist = list1.append(i[1])
+#	print plist
+print list1
+
+
+
+#mylist = [[['a','b','c'],['d','f','g']],[['h','i','j'],['k','l','m']]];
+#print mylist[0]
+#res = [mylist[i][j][1] for i in range(len(mylist)) for j in range(len(mylist[i]))];
+#for i in range(len(mylist)): 
+#	print "i =", i
+#	for j in range(len(mylist[i])):
+#		print "j =", j
+#
+#res = [mylist[i][j][1]]
+#print (res)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

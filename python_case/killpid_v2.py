@@ -7,14 +7,14 @@ def kill_id(process):
 	txt = f.readlines()
 #	print "txt =" ,txt
 	for line in txt[0:]:
-		print "line =", line
+#		print "line =", line
 		colum = line.split()
 		pid = colum[1]
-		if  'master' not in line:
-			print "haha"
+	#	if  'master' not in line:
+	#		print "haha"
 
 		plist = pid_list.append(pid[0:])
-	#print pid_list
+	print pid_list
 		
 
 	
