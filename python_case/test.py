@@ -205,16 +205,16 @@
 ##    return HttpResponse(html)
 #hour_ahead(5)
 
-list1 = []
-list = [['a', 'b', 'c'],['1', '2', '3']]
-#list1 = [[list[0][1]],[list[1][1]]]
-for i in list:
-#	print i
-#	plist = list1.append(i[1].split())
-	plist = list1.append(i[1])
-#	print plist
-print list1
-
+#list1 = []
+#list = [['a', 'b', 'c'],['1', '2', '3']]
+##list1 = [[list[0][1]],[list[1][1]]]
+#for i in list:
+##	print i
+##	plist = list1.append(i[1].split())
+#	plist = list1.append(i[1])
+##	print plist
+#print list1
+#
 
 
 #mylist = [[['a','b','c'],['d','f','g']],[['h','i','j'],['k','l','m']]];
@@ -227,8 +227,18 @@ print list1
 #
 #res = [mylist[i][j][1]]
 #print (res)
+lis= [1, 2, 3]
 
+guess = int(input('please input: '))
 
+if guess in lis:
+	print 'if end'
+
+if not guess:
+	print 'null end'
+
+else:
+	print 'else end'
 
 
 
