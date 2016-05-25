@@ -234,6 +234,9 @@ guess = int(input('please input: '))
 if guess in lis:
 	print 'if end'
 
+if guess not in lis:
+	print 'not in'
+
 if not guess:
 	print 'null end'
 
