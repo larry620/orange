@@ -1,3 +1,7 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
 
 #import re
 #f = open('name.txt' , 'r')
@@ -226,26 +230,57 @@
 #		print "j =", j
 #
 #res = [mylist[i][j][1]]
+
 #print (res)
-lis= [1, 2, 3]
 
-guess = int(input('please input: '))
+#########if not判断##########
+#lis= [1, 2, 3]
+#guess = int(input('please input: '))
+#if guess in lis:
+#	print 'if end'
+#
+#if guess not in lis:
+#	print 'not in'
+#
+#if not guess:
+#	print 'null end'
+#
+#else:
+#	print 'else end'
+###################
 
-if guess in lis:
-	print 'if end'
+########计算类中函数长度##############
+#class MyObject(object):
+#	def __init__(self):
+#		self.x = 9
+#	
+#	def power(self):
+#		return self.x * self.x
+#
+#
+#obj = MyObject()
+#obj1 = obj.power()
+##print len('%d'%obj1)
+##print len(str(obj1))
+#print obj.x
+#print MyObject.x
+####################
 
-if guess not in lis:
-	print 'not in'
+#####################
 
-if not guess:
-	print 'null end'
+from types import MethodType
+class Student(object):
+	def set_age(self, age):
+		self.age = age
 
-else:
-	print 'else end'
+s = Student()
+s.set_age = MethodType(set_age, s)
+s.set_age(25)
+print(s.age)
 
-
-
-
+#s = Student()
+#s.name = 'larry'
+#print(s.name)
 
 
 
