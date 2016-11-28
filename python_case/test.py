@@ -713,15 +713,17 @@ class person:
     def getad(self):  
         return self.address   
     def setad(self,address):  
-        self.address = address  
-      
+        self.address = address        
           
+
 dic ={}  
+
 def addp(cname,name,adress):     
     cname=person()  
     cname.setname(name)  
     cname.setad(adress)  
     dic[name]=cname      
+
 def delp(name):  
     del dic[name]  
   
@@ -730,6 +732,7 @@ def write():
     f = file("dic.data",'w')  
     p.dump(dic,f)  
     f.close()      
+
 def read():  
     f=file("dic.data")  
     dic = p.load(f)  
