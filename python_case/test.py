@@ -719,13 +719,14 @@ class person:
 dic ={}  
 
 def addp(cname,name,adress):     
-    cname=person()  
-    cname.setname(name)  
-    cname.setad(adress)  
-    dic[name]=cname      
+    t=person()  
+    t.setname(name)  
+    t.setad(adress)  
+    dic[name]=t  
 
 def delp(name):  
-    del dic[name]  
+	print dic[name]
+    #del dic[name]  
   
       
 def write():  
@@ -752,8 +753,9 @@ def view():
     f=file("dic.data")  
     dic = p.load(f)  
     for name,cname in dic.items():  
-            print '%s at %s' % (name, dic[name].getad())  
-      
+            print '%s in %s at %s' % (cname,name, dic[name].getad())  
+
+dic
   
 while True:  
     s= raw_input("enter cmd-->\n")  
