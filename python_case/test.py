@@ -701,69 +701,99 @@
 #show_con()
 ##}}}
 
-#{{{#####conc_ex#####
-import cPickle as p  
-  
-class person:    
-    ''''' defined class person'''     
-    def getname(self):  
-        return self.name   
-    def setname(self,name):  
-        self.name = name  
-    def getad(self):  
-        return self.address   
-    def setad(self,address):  
-        self.address = address        
-          
+##{{{#####conc_ex#####
+#import cPickle as p  
+#  
+#class person:    
+#    ''''' defined class person'''     
+#    def getname(self):  
+#        return self.name   
+#    def setname(self,name):  
+#        self.name = name  
+#    def getad(self):  
+#        return self.address   
+#    def setad(self,address):  
+#        self.address = address        
+#          
+#
+#dic ={}  
+#
+#def addp(cname,name,adress):     
+#    t=person()  
+#    t.setname(name)  
+#    t.setad(adress)  
+#    dic[name]=t  
+#
+#def delp(name):  
+#	print dic[name]
+#    #del dic[name]  
+#  
+#      
+#def write():  
+#    f = file("dic.data",'w')  
+#    p.dump(dic,f)  
+#    f.close()      
+#
+#def read():  
+#    f=file("dic.data")  
+#    dic = p.load(f)  
+#         
+#def search(name):  
+#    '''''search person'''  
+#    read()  
+#    p = person()  
+#    if name in dic:  
+#        p=dic[name]  
+#        print "%s de adress is %s"%(name,p.getad())  
+#    else:  
+#        print"%s cannot find"%(name)  
+#  
+#def view():  
+#    ''''' view all person  information'''  
+#    f=file("dic.data")  
+#    dic = p.load(f)  
+#    for name,cname in dic.items():  
+#            print '%s in %s at %s' % (cname,name, dic[name].getad())  
+#
+#dic
+#  
+#while True:  
+#    s= raw_input("enter cmd-->\n")  
+#    if(s=="quit"):  
+#        break  
+#    else:  
+#        exec s  
+#
+##}}}
 
-dic ={}  
+##{{{#####spider_urllib#####
+#import urllib
 
-def addp(cname,name,adress):     
-    t=person()  
-    t.setname(name)  
-    t.setad(adress)  
-    dic[name]=t  
-
-def delp(name):  
-	print dic[name]
-    #del dic[name]  
-  
-      
-def write():  
-    f = file("dic.data",'w')  
-    p.dump(dic,f)  
-    f.close()      
-
-def read():  
-    f=file("dic.data")  
-    dic = p.load(f)  
-         
-def search(name):  
-    '''''search person'''  
-    read()  
-    p = person()  
-    if name in dic:  
-        p=dic[name]  
-        print "%s de adress is %s"%(name,p.getad())  
-    else:  
-        print"%s cannot find"%(name)  
-  
-def view():  
-    ''''' view all person  information'''  
-    f=file("dic.data")  
-    dic = p.load(f)  
-    for name,cname in dic.items():  
-            print '%s in %s at %s' % (cname,name, dic[name].getad())  
-
-dic
-  
-while True:  
-    s= raw_input("enter cmd-->\n")  
-    if(s=="quit"):  
-        break  
-    else:  
-        exec s  
+#f = urllib.urlopen('http://glpi.larry.com/')
+#f = urllib.quote('http://glpi.larry.com/')
+#one = f.geturl()
+#print f
+#for i in one:
+#	print i
 
 #}}}
+
+#{{{#####slot
+#from tmodule.test_module import *
+
+
+#class Student:
+#	pass
+#
+#s = Student()
+#s.set_age = MethodType(set_age, s) 
+#s.name = 'larry'
+#s.set_age(25)
+#s.age
+##print (s.name)
+##print (s.set_age)
+
+#}}}
+
 
 
