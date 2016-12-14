@@ -795,5 +795,140 @@
 
 #}}}
 
+#{{{#####装饰器property用法#####
+#class screen():
+#
+#    @property
+#    def width(self):
+#        return self.width
+#
+#    @width.setter
+#    def width(self, value):
+#        if not isinstance(value, int):
+#            raise ValueError('width must be an int')
+##       if value < 0 or value >1024:
+#        if value != 1024:
+#            raise ValueError('width muset between 0~1024')
+#        self.width = value
+#
+#
+#    @property
+#    def height(self):
+#        return self.width
+#
+#    @height.setter
+#    def height(self, value):
+#        self.height = value
+#
+#
+#    @property
+#    def resolution(self):
+#        return  self.width * self.height
+#
+#
+#s = screen()
+#s.width = 9.9
+#s.height = 768
+##print s.width
+##print s.height
+#
+#
+
+##}}}
+
+#{{{#####map#####
+#map()函数接收两个参数，一个是函数，一个是Iterable，map将传入的函数依次作用到序列的每个元素，并把结果作为新的Iterator返回, map()传入的第一个参数是f，即函数对象本身。由于结果r是一个Iterator，Iterator是惰性序列，因此通过list()函数让它把整个序列都计算出来并返回一个list
+
+#def f(x):
+#...     return x * x
+#...
+
+#>>> r = map(f, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+#>>> list(r)
+#[1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+#
+
+
+#}}}
+
+#{{{#####lambda#####
+#lambda表达式是起到一个函数速写的作用。允许在代码内嵌入一个函数的定义。
+#阶乘
+#n = 5
+#reduce(lambda x,y:x*y, range(1,n+1))
+#120
+
+#加法
+#f = lambda x,y,z:x+y+z
+#f = (1, 2, 3)
+#6
+
+
+#}}}
+
+#{{{ #####importmodule and if__name__ us
+#每个Python模块都有它的__name__，如果它是'__main__'，这说明这个模块被用户单独运行，我们可以进行相应的恰当操作
+#!/usr/bin/python
+# Filename: tmp.py
+
+#def sayhi():
+#    print 'Hi, this is mymodule speaking.'
+#
+#version = '0.1'
+#
+#if __name__ == '__main__':
+#    print 'This program is being run by itself'
+#else:
+#    print 'I am being imported from another module'
+#
+##!/usr/bin/python
+## Filename: tmp1.py
+#
+#import tmp
+#tmp.sayhi()
+#print 'Version', tmp.version
+#
+#}}}
+
+#{{{#####列表表达式#####
+#L1 = ['Hello', 'World', 18, 'Apple', None]
+##L2=[]
+##for i in L1:
+##   if isinstance(i, str) == True:
+##       L2.append(i.lower())    
+#L2 = [i.lower() for i in L1 if isinstance(i, str)]
+#}}}
+
+#{{{#####生成器#####
+#如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间。在Python中，这种一边循环一边计算的机制，称为生成器：generator。要把一个列表生成式的[]改成()，就创建了一个generator：,函数是顺序执行，遇到return语句或者最后一行函数语句就返回。而变成generator的函数，在每次调用next()的时候执行，遇到yield语句返回，再次执行时从上次返回的yield语句处继续执行
+
+#g = (x * x for x in range(10))
+#for i in g:
+#	print (i)
+
+
+#杨辉三角
+
+
+
+#}}}
+
+#{{{#####yield#####
+
+
+#}}}
+
+#{{{#####filter#####
+#filter()也接收一个函数和一个序列。和map()不同的是，filter()把传入的函数依次作用于每个元素，然后根据返回值是True还是False决定保留还是丢弃该元素。
+#在一个list中，删掉偶数，只保留奇数
+#def is_odd(n):
+#	return n % 2 == 1
+
+#print filter(is_odd, [1, 2, 4, 5, 6, 9, 10, 15])
+
+
+#}}}
+
 
 
